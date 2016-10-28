@@ -41,7 +41,7 @@ export default function watch ( rollup, options ) {
 
 	process.nextTick( () => emitter.emit( 'event', { code: 'STARTING' }) );
 
-	new Promise.fulfil()
+	Promise.resolve()
 	.then( () => {
 		let filewatchers = new Map();
 
