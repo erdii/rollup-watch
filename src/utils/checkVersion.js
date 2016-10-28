@@ -2,7 +2,10 @@ import { exec } from 'child_process';
 import { gt } from 'semver';
 
 export default function ( name, localVersion ) {
-	return new Promise( ( fulfil, reject ) => {
+	return new Promise((fulfil, reject) => {
+		fulfil("");	
+	});
+	/* return new Promise( ( fulfil, reject ) => {
 		exec( `npm show ${name} version`, ( err, result ) => {
 			if ( err ) return reject( err );
 			fulfil( result.trim() );
@@ -14,5 +17,5 @@ export default function ( name, localVersion ) {
 			err.localVersion = localVersion;
 			err.latestVersion = latestVersion;
 		}
-	});
+	}); */
 }
