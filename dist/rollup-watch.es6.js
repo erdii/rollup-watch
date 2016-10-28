@@ -67,7 +67,7 @@ function watch ( rollup, options ) {
 
 	process.nextTick( function () { return emitter.emit( 'event', { code: 'STARTING' }); } );
 
-	new Promise.fulfil()
+	Promise.resolve()
 	.then( function () {
 		var filewatchers = new Map();
 
